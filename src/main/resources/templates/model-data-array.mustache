@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+<body>
+
+  <!-- members 리스트 전체를 출력, 이는 객체 리스트의 toString() 메서드를 호출해 출력하게 됩니다. -->
+  <h2>{{members}}</h2>
+  <hr />
+
+  <!-- members 리스트의 첫 번째 항목(member[0])의 id 필드를 출력 -->
+  {{members.0.id}}
+  <hr />
+
+  <!-- #members는 members 리스트가 존재할 경우 반복적으로 각 항목을 렌더링 -->
+  {{#members}}
+    <h2>{{id}}</h2> <!-- member 객체의 id 필드 값을 출력 -->
+    <h2>{{username}}</h2> <!-- member 객체의 username 필드 값을 출력 -->
+    <h2>{{phone}}</h2> <!-- member 객체의 phone 필드 값을 출력 -->
+  {{/members}}
+
+  <hr/>
+  
+  <!-- user 변수의 값(true/false)를 출력 -->
+  {{user}}
+  <hr/>
+
+  <!-- user가 true일 경우 조건부 렌더링 -->
+  {{#user}}
+    <h2>유저가 있습니다.</h2>
+  {{/user}}
+
+  <!-- user가 false이거나 null일 경우 조건부 렌더링 -->
+  {{^user}}
+    <h2>유저가 없습니다.</h2>
+  {{/user}}
+
+</body>
+</html>

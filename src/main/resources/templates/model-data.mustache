@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title> 
+</head>
+<body>
+  <h1>modelData 페이지입니다.</h1> 
+
+  <!-- member라는 객체가 존재할 경우 그 전체 객체를 렌더링합니다. -->
+  <h2>{{member}}</h2>
+  <hr/>
+
+  <h1>#문법 : 조건문 혹은 반복문</h1> <!-- 머스태치에서 #문법을 사용하는 조건부 렌더링 및 반복문에 대한 설명입니다. -->
+  
+  <!-- member가 존재할 경우 # 섹션 태그를 통해 조건부로 다음의 내용들이 렌더링됩니다. -->
+  {{#member}} 
+    <h2>{{id}}</h2> <!-- member 객체의 id 필드를 렌더링합니다. -->
+    <h2>{{username}}</h2> <!-- member 객체의 username 필드를 렌더링합니다. -->
+    <h2>{{phone}}</h2> <!-- member 객체의 phone 필드를 렌더링합니다. -->
+  {{/member}} <!-- 조건부 렌더링을 끝냅니다. -->
+</body>
+</html>
